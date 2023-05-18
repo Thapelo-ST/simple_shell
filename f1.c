@@ -1,9 +1,10 @@
 #include "sh.h"
 
 /**
- * @brief Function to display the history.
- * @param job The jobs struct object.
- * @return 0 on successful execution.
+ *_history - ...
+ * @job:...
+ * @jobs:...
+ * Return:...
  */
 
 int _history(jobs *job)
@@ -13,9 +14,10 @@ int _history(jobs *job)
 }
 
 /**
- * @brief Function to handle exit functionality.
- * @param job The jobs struct object.
- * @return -2 to indicate exit.
+ * _exits -...
+ * @job:...
+ * @jobs:...
+ * Return:..
  */
 
 int _exits(jobs *job)
@@ -27,9 +29,10 @@ int _exits(jobs *job)
 }
 
 /**
- * @brief Function to change the directory.
- * @param job The jobs struct object.
- * @return 0 on successful execution.
+ * change_dir:..
+ * @job:...
+ * @jobs:...
+ * Return:..
  */
 
 int change_dir(jobs *job)
@@ -74,9 +77,10 @@ int change_dir(jobs *job)
 }
 
 /**
- * @brief Function to display help information.
- * @param job The jobs struct object.
- * @return 0 on successful execution.
+ * _help1 -...
+  * @job:...
+ * @jobs:...
+ * Return:..
  */
 
 int _help1(jobs *job)
