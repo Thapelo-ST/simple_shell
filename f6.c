@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * _decimal - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int _decimal(int input, int fd)
 {
         int (*m_putchar)(char) = _putchar;
