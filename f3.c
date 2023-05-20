@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * alias -
+ * @jobs:...
+ * @job:.. 
+ * Return:..
+ */
+
 int unset_a(jobs *job, char *str)
 {
         char *p = _strchr(str, '=');
