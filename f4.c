@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * _builtin - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int adile(jobs *job)
 {
         /* declare variables*/
