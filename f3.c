@@ -1,7 +1,7 @@
 #include "sh.h"
 
 /**
- * alias -
+ * unset_a 
  * @jobs:...
  * @job:.. 
  * Return:..
@@ -23,6 +23,13 @@ int unset_a(jobs *job, char *str)
         return (feed);
 }
 
+/**
+ * set_a- ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int set_a(jobs *job, char *str)
 {
         char *value = _strchr(str, '=') + 1;
@@ -32,6 +39,13 @@ int set_a(jobs *job, char *str)
         unset_a(job, str);
         return (adne(&(job->alias), str, 0) == NULL);
 }
+
+/**
+ * _alias - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int _alias(jobs *job)
 {
@@ -60,6 +74,13 @@ int _alias(jobs *job)
 
         return (0);
 }
+
+/**
+ * print_a - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int print_a(list *node)
 {

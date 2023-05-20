@@ -4,7 +4,6 @@
  *  _chain- ...
  * @jobs:...
  * @job:..
- * Return:...
  */
 
 void _chain(jobs *job, char *buf, size_t *p, size_t i, size_t len)
@@ -30,6 +29,12 @@ void _chain(jobs *job, char *buf, size_t *p, size_t i, size_t len)
 
         *p = j;
 }
+/**
+ * ovwr_alias -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int ovwr_alias(jobs *job)
 {
@@ -61,6 +66,13 @@ int _change(char **old, char *new)
         *old = new;
         return (1);
 }
+
+/**
+ * ovwr_var-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int ovwr_var(jobs *job)
 {
@@ -96,6 +108,13 @@ int ovwr_var(jobs *job)
         }
         return (0);
 }
+
+/**
+ * c_chain -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int c_chain(jobs *job, char *buf, size_t *p)
 {

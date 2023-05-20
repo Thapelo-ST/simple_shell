@@ -39,6 +39,12 @@ int _decimal(int input, int fd)
         return (count);
 }
 
+/**
+ * print_filedir -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int print_filedir(char c, int fd)
 {
@@ -55,6 +61,13 @@ int print_filedir(char c, int fd)
         return (1);
 }
 
+/**
+ * show_filedir -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int show_filedir(char *c, int d)
 {
         int i = 0;
@@ -68,6 +81,12 @@ int show_filedir(char *c, int d)
         return (i);
 }
 
+/**
+ * env_putchar-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int env_putchar(char c)
 {
@@ -84,7 +103,11 @@ int env_putchar(char c)
         return (1);
 }
 
-
+/**
+ * env_put 
+ * @jobs:...
+ * @job:..
+ */
 void env_put(char *str)
 {
         int i = 0;

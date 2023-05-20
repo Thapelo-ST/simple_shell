@@ -17,6 +17,12 @@ int hist_list(jobs *job, char *buf, int linecount)
         job->history = job->history ? job->history : node;
         return (0);
 }
+/**
+ * fetch_fh -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char *fetch_fh(jobs *job)
 {
@@ -35,7 +41,12 @@ char *fetch_fh(jobs *job)
         return (buf);
 }
 
-
+/**
+ * show_hist -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 int show_hist(jobs *job)
 {
         int i, last = 0, linecount = 0;
@@ -77,7 +88,14 @@ int show_hist(jobs *job)
                 dnai(&(job->history), 0);
         c_hist(job);
         return (job->histcount);
-}
+} 
+
+/**
+ * record -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int record(jobs *job)
 {
@@ -101,6 +119,12 @@ int record(jobs *job)
         return (1);
 }
 
+/**
+ * c_hist-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int c_hist(jobs *job)
 {

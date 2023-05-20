@@ -1,6 +1,13 @@
 #include "sh.h"
 #define BLT_CLC 1
 #define BLT_UNSC 2
+
+/**
+ * perr -...
+ * @jobs:...
+ * @job:..
+ */
+
 void perr(jobs *job, char *estr)
 {
         env_put(job->fname);
@@ -11,7 +18,12 @@ void perr(jobs *job, char *estr)
         env_put(": ");
         env_put(estr);
 }
-
+/**
+ * atoi_error -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int atoi_error(char *s)
 {
@@ -35,7 +47,12 @@ int atoi_error(char *s)
         return (result);
 }
 
-
+/**
+ * changeInt-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 char *changeInt(long int num, int base, int flags)
 {
         static char buffer[50];
@@ -54,6 +71,13 @@ char *changeInt(long int num, int base, int flags)
                 *--p = sign;
         return (p);
 }
+
+/**
+ * no_hashtags -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void no_hashtags(char *buf)
 {

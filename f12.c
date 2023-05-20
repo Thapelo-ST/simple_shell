@@ -31,6 +31,13 @@ list *node_incr(list **head, const char *str, int num)
         return (new_head);
 }
 
+/**
+ * dnai -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int dnai(list **head, unsigned int index)
 {
         list *node, *prev_node;
@@ -66,6 +73,13 @@ int dnai(list **head, unsigned int index)
         return (0);
 }
 
+/**
+ * clear_list -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 void clear_list(list **head_ptr)
 {
         list *node, *next_node, *head;
@@ -83,6 +97,13 @@ void clear_list(list **head_ptr)
         }
         *head_ptr = NULL;
 }
+
+/**
+ * print_s -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 size_t print_s(const list *h)
 {

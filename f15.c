@@ -118,6 +118,13 @@ char **str_tok(char *str, char *d)
         return s;
 }
 
+/**
+ * split_string-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 char **split_string(char *str, char d)
 {
         int i, j, k, numwords = 0;

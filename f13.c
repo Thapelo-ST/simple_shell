@@ -49,6 +49,13 @@ char *_repeat(char *pathstr, int start, int stop)
 	return (buf);
 }
 
+/**
+ * path_serch -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 char *path_serch(jobs *job, char *pathstr, char *cmd)
 {
         int i = 0, curr_pos = 0;

@@ -1,7 +1,7 @@
 #include "sh.h"
 
 /**
- * _builtin - ...
+ * adile - ...
  * @jobs:...
  * @job:..
  * Return:...
@@ -23,6 +23,13 @@ int adile(jobs *job)
         job->env = node;
         return (0);
 }
+
+/**
+ * own_unsetenv - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int own_unsetenv(jobs *job)
 {
@@ -48,6 +55,13 @@ int own_unsetenv(jobs *job)
         return (0);
 }
 
+/**
+ * own_setenv - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int own_setenv(jobs *job)
 {
         /* checking argc validity */
@@ -64,6 +78,13 @@ int own_setenv(jobs *job)
         }
         return (1);
 }
+
+/**
+ * _fetch -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char *_fetch(jobs *job, const char *name)
 {
@@ -82,6 +103,12 @@ char *_fetch(jobs *job, const char *name)
         return (NULL);
 }
 
+/**
+ * _environment -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int _enviroment(jobs *job)
 {

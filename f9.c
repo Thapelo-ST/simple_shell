@@ -1,12 +1,11 @@
 #include "sh.h"
 
 /**
- * string manipulation - ...
- * @_strcpy:...
- * @_strdup:..
+ * _strcpy -...
+ * @jobs:...
+ * @job:..
  * Return:...
  */
-
 
 char *_strcpy(char *dest, char *src)
 {
@@ -22,7 +21,12 @@ char *_strcpy(char *dest, char *src)
         dest[i] = 0;
         return (dest);
 }
-
+/**
+ * _strdup -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char *_strdup(const char *str)
 {
@@ -41,6 +45,12 @@ char *_strdup(const char *str)
         return (ret);
 }
 
+/**
+ * clean1 -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void clean1(jobs *job)
 {
@@ -51,6 +61,12 @@ void clean1(jobs *job)
         job->argc = 0;
 }
 
+/**
+ * clean2 -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void clean2(jobs *job, int all)
 {

@@ -1,12 +1,11 @@
 #include "sh.h"
+
 /**
- * get_line- ...
+ * buff_var-...
  * @jobs:...
  * @job:..
  * Return:...
  */
-
-
 
 ssize_t buff_var(jobs *job, char **buf, size_t *len)
 {
@@ -39,6 +38,13 @@ ssize_t buff_var(jobs *job, char **buf, size_t *len)
         }
         return (r);
 }
+
+/**
+ * own_getline -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 ssize_t own_getline(jobs *job)
 {
@@ -74,6 +80,13 @@ ssize_t own_getline(jobs *job)
         return (r);
 }
 
+/**
+ * get_line -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int get_line(jobs *job, char **ptr, size_t *length)
 {
         /*declare variables*/
@@ -108,12 +121,26 @@ int get_line(jobs *job, char **ptr, size_t *length)
         return (s);
 }
 
+/**
+ * keyb_exit-...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 void keyb_exit(__attribute__((unused))int sig_num)
 {
         _puts("\n");
         _puts("$ ");
         _putchar(CBF);
 }
+
+/**
+ * start_job -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void start_job(jobs *job, char **av)
 {

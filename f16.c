@@ -63,6 +63,13 @@ char *_memset(char *s, char b, unsigned int n)
         return (s);
 }
 
+/**
+ * hsh -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int hsh(jobs *job, char **av)
 {
         ssize_t r = 0;
