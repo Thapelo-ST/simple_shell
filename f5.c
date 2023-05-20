@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * string manipulation - ...
+ * @_strlen:...
+ * @_strncpy:..
+ * Return:...
+ */
+
 
 int _strlen(char *s)
 {
