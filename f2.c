@@ -1,5 +1,16 @@
 #include "sh.h"
 
+/**
+ * main - Entry point of the program
+ *
+ * This function demonstrates the usage of various functions from the "sh.h" library.
+ * It showcases the functionality of adding nodes to a linked list, traversing the list,
+ * comparing strings, and searching for characters in a string. Additionally, it utilizes
+ * the `_putchar` function to write characters, and the `_puts` function to write strings.
+ *
+ * Return: Always 0
+ */
+
 int _putchar(char c)
 {
         static int i;
