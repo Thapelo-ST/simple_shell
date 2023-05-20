@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ *  _chain- ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 void _chain(jobs *job, char *buf, size_t *p, size_t i, size_t len)
 {
         size_t j = *p;

@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * mobility - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int mobility(jobs *job)
 {
 	int stdin_fileno = fileno(stdin);
@@ -8,6 +15,13 @@ int mobility(jobs *job)
 	return (input_isatty && readfile);
 }
 
+/**
+ * _isalpha - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int _isalpha(int c)
 {
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
@@ -15,6 +29,13 @@ int _isalpha(int c)
         else
                 return (0);
 }
+
+/**
+ * _atoi - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int _atoi(char *s)
 {
@@ -42,6 +63,13 @@ int _atoi(char *s)
 
 	return (si * res);
 }
+
+/**
+ * str_tok - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char **str_tok(char *str, char *d)
 {

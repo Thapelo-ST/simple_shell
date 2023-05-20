@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * _realloc - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	/*declare variables*/
@@ -22,6 +29,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
         return (p);
 }
 
+/**
+ * ffree - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 void ffree(char **pp)
 {
         char **a = pp;
@@ -32,6 +46,13 @@ void ffree(char **pp)
                 free(*pp++);
         free(a);
 }
+
+/**
+ * _memset - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -77,6 +98,13 @@ int hsh(jobs *job, char **av)
         }
         return (builtin_ret);
 }
+
+/**
+ * get_blt - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int get_blt(jobs *job)
 {

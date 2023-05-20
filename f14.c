@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * nbw - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 list *nbw(list *node, char *prefix, char c)
 {
         char *p = NULL;
@@ -14,6 +21,13 @@ list *nbw(list *node, char *prefix, char c)
         return (NULL);
 }
 
+/**
+ * gni - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 ssize_t gni(list *head, list *node)
 {
         size_t i = 0;
@@ -27,6 +41,13 @@ ssize_t gni(list *head, list *node)
         }
         return (-1);
 }
+
+/**
+ * p_list - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 size_t p_list(const list *h)
 {
@@ -45,6 +66,13 @@ size_t p_list(const list *h)
         return (i);
 }
 
+/**
+ * _list - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 size_t _list(const list *h)
 {
         size_t i = 0;
@@ -52,6 +80,13 @@ size_t _list(const list *h)
                 i++;
         return (i);
 }
+
+/**
+ * list_str - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char **list_str(list *head)
 {

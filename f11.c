@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * hist_list ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int hist_list(jobs *job, char *buf, int linecount)
 {
         /* initialize variables */

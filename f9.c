@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * string manipulation - ...
+ * @_strcpy:...
+ * @_strdup:..
+ * Return:...
+ */
+
 
 char *_strcpy(char *dest, char *src)
 {

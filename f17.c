@@ -1,4 +1,10 @@
 #include "sh.h"
+/**
+ * get_command - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void get_command(jobs *job)
 {
@@ -36,6 +42,12 @@ void get_command(jobs *job)
         }
 }
 
+/**
+ * _fork - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 void _fork(jobs *job)
 {
@@ -70,6 +82,13 @@ void _fork(jobs *job)
                 }
         }
 }
+
+/**
+ * _setenv - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int _setenv(jobs *job, char *var, char *value)
 {
@@ -109,6 +128,12 @@ int _setenv(jobs *job, char *var, char *value)
         return (0);
 }
 
+/**
+ * _unsetenv - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int _unsetenv(jobs *job, char *var)
 {
@@ -130,6 +155,13 @@ int _unsetenv(jobs *job, char *var)
         job->env_changed = node ? dnai(&job->env, i) : 0;
         return (job->env_changed);
 }
+
+/**
+ * env_fetch - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 char **env_fetch(jobs *job)
 {

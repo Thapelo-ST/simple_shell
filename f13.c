@@ -1,9 +1,22 @@
 #include "sh.h"
+/**
+ * clean_buffer - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int clean_buffer(void **ptr)
 {
-	return (ptr && *ptr) ? (free(*ptr), *ptr = NULL, 1) : 0;
+	return (ptr && *ptr) ? (free(*ptr), *ptr = NULL, 1) : 0;	
 }
+
+/**
+ * check_cmd - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+*/
 
 int check_cmd(jobs *job, char *path)
 {
@@ -15,7 +28,12 @@ int check_cmd(jobs *job, char *path)
 
         return (1);
 }
-
+/**
+ * _repeat - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+*/
 char *_repeat(char *pathstr, int start, int stop)
 {
 	static char buf[1024];

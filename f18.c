@@ -1,5 +1,12 @@
 #include "sh.h"
 
+/**
+ * _bw - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 char *_bw(const char *haystack, const char *needle)
 {
         while (*needle)
@@ -8,6 +15,12 @@ char *_bw(const char *haystack, const char *needle)
         return ((char *)haystack);
 }
 
+/**
+ * scan_buffer - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 ssize_t scan_buffer(jobs *job, char *buf, size_t *i)
 {
@@ -20,6 +33,13 @@ ssize_t scan_buffer(jobs *job, char *buf, size_t *i)
                 *i = r;
         return (r);
 }
+
+/**
+ * check_del - ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 int check_del(char c, char *delim)
 {

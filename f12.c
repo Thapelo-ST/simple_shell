@@ -1,4 +1,10 @@
 #include "sh.h"
+/**
+ * node_incr- ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 list *node_incr(list **head, const char *str, int num)
 {

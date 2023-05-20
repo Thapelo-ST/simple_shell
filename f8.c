@@ -1,4 +1,11 @@
 #include "sh.h"
+/**
+ * get_line- ...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 
 
 ssize_t buff_var(jobs *job, char **buf, size_t *len)
