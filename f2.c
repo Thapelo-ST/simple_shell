@@ -97,7 +97,6 @@ int _strcmp(char *s1, char *s2)
 /**
  * _puts -...
  * @jobs:...
- * @job:..
  */
 void _puts(char *str)
 {
