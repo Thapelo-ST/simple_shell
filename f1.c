@@ -3,7 +3,6 @@
 /**
  *_history - ...
  * @job:...
- * @jobs:...
  * Return:...
  */
 
@@ -15,8 +14,7 @@ return (0);
 
 /**
  * _exits -...
- * @job:...
- * @jobs:...
+ * @job:....
  * Return:..
  */
 
@@ -29,9 +27,8 @@ return (-2);
 }
 
 /**
- * change_dir:..
+ * change_dir -...
  * @job:...
- * @jobs:...
  * Return:..
  */
 
@@ -43,8 +40,7 @@ int chdir_ret;
 if (!job->argv[1])
 {
 dir = _fetch(job, "HOME=");
-if (!dir) dir =
-_fetch(job, "PWD=");
+if (!dir) dir = _fetch(job, "PWD=");
 if (!dir)
 
 dir = "/";
@@ -80,7 +76,6 @@ return (0);
 /**
  * _help1 -...
  * @job:...
- * @jobs:...
  * Return:..
  */
 
@@ -94,5 +89,5 @@ _puts("name of that function is:\n");
 _puts(*arg_arr);
 _puts("\n");
 }
-return 0;
+return (0);
 }
