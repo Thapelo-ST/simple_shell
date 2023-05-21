@@ -1,14 +1,10 @@
 #include "sh.h"
 
 /**
- * main - Entry point of the program
- *
- * This function demonstrates the usage of various functions from the "sh.h" library.
- * It showcases the functionality of adding nodes to a linked list, traversing the list,
- * comparing strings, and searching for characters in a string. Additionally, it utilizes
- * the `_putchar` function to write characters, and the `_puts` function to write strings.
- *
- * Return: Always 0
+ * _putchar -...
+ * @jobs:...
+ * @job:..
+ * Return:...
  */
 
 int _putchar(char c)
@@ -26,6 +22,12 @@ int _putchar(char c)
         return (1);
 }
 
+/**
+ * adne -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
 
 list *adne(list **head, const char *str, int num)
 {
@@ -70,6 +72,13 @@ char *_strchr(char *s, char c)
         return (NULL);
 }
 
+/**
+ * _strchr -...
+ * @jobs:...
+ * @job:..
+ * Return:...
+ */
+
 int _strcmp(char *s1, char *s2)
 {
         if (*s1 && *s2)
@@ -85,6 +94,11 @@ int _strcmp(char *s1, char *s2)
                 return ((*s1 < *s2) ? -1 : 1);
 }
 
+/**
+ * _puts -...
+ * @jobs:...
+ * @job:..
+ */
 void _puts(char *str)
 {
         int i = 0;
