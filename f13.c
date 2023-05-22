@@ -7,7 +7,7 @@
 
 int clean_buffer(void **ptr)
 {
-	return (ptr && *ptr) ? (free(*ptr), *ptr = NULL, 1) : 0;	
+	return ((ptr && *ptr) ? (free(*ptr), *ptr = NULL, 1) : 0);
 }
 
 /**
@@ -19,13 +19,13 @@ int clean_buffer(void **ptr)
 
 int check_cmd(jobs *job, char *path)
 {
-        struct stat st;
-        (void)job;
+	struct stat st;
+	(void)job;
 
-        if (!path || stat(path, &st) || !(st.st_mode & S_IFREG))
-                return (0);
+	if (!path || stat(path, &st) || !(st.st_mode & S_IFREG))
+		return (0);
 
-        return (1);
+	return (1);
 }
 /**
  * _repeat - ...
@@ -59,30 +59,31 @@ char *_repeat(char *pathstr, int start, int stop)
 
 char *path_serch(jobs *job, char *pathstr, char *cmd)
 {
-        int i = 0, curr_pos = 0;
-        char *path;
-        if (!pathstr)
-                return (NULL);
+	int i = 0, curr_pos = 0;
+	char *path;
 
-        if ((_strlen(cmd) > 2) && _bw(cmd, "./"))
-        {
-                if (check_cmd(job, cmd))
-                        return (cmd);
-        }
-        while (1)
-        {
-                if (!pathstr[i] || pathstr[i] == ':')
-                {
-                        path = _repeat(pathstr, curr_pos, i);
-                        _strcat(path, (*path) ? "/" : "");
-                        _strcat(path, cmd);
-                        if (check_cmd(job, path))
-                                return (path);
-                        if (!pathstr[i])
-                                break;
-                        curr_pos = i;
-                }
-                i++;
-        }
-        return (NULL);
+	if (!pathstr)
+		return (NULL);
+
+	if ((_strlen(cmd) > 2) && _bw(cmd, "./"))
+	{
+		if (check_cmd(job, cmd))
+			return (cmd);
+	}
+	while (1)
+	{
+		if (!pathstr[i] || pathstr[i] == ':')
+		{
+			path = _repeat(pathstr, curr_pos, i);
+			_strcat(path, (*path) ? "/" : "");
+			_strcat(path, cmd);
+			if (check_cmd(job, path))
+				return (path);
+			if (!pathstr[i])
+				break;
+			curr_pos = i;
+		}
+		i++;
+	}
+	return (NULL);
 }

@@ -9,10 +9,10 @@
 
 char *_bw(const char *haystack, const char *needle)
 {
-        while (*needle)
-                if (*needle++ != *haystack++)
-                        return (NULL);
-        return ((char *)haystack);
+	while (*needle)
+		if (*needle++ != *haystack++)
+			return (NULL);
+	return ((char *)haystack);
 }
 
 /**
@@ -25,14 +25,14 @@ char *_bw(const char *haystack, const char *needle)
 
 ssize_t scan_buffer(jobs *job, char *buf, size_t *i)
 {
-        ssize_t r = 0;
+	ssize_t r = 0;
 
-        if (*i)
-                return (0);
-        r = read(job->readfd, buf, BSZ);
-        if (r >= 0)
-                *i = r;
-        return (r);
+	if (*i)
+		return (0);
+	r = read(job->readfd, buf, BSZ);
+	if (r >= 0)
+		*i = r;
+	return (r);
 }
 
 /**

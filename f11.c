@@ -13,6 +13,7 @@ int hist_list(jobs *job, char *buf, int linecount)
 	/* initialize variables */
 	/* initialize node to history if its not null else assign it to null */
 	list *node = job->history ? job->history : NULL;
+
 	adne(&node, buf, linecount);
 	/*re-assigning history to origional history if its not null else to node*/
 	job->history = job->history ? job->history : node;
@@ -101,6 +102,7 @@ int record(jobs *job)
 	list *node = NULL;
 
 	char *filename = fetch_fh(job);
+
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);

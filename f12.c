@@ -69,7 +69,7 @@ int dnai(list **head, unsigned int index)
 		prev_node->next = node->next;
 		free(node->next);
 		free(node);
-		return(1);
+		return (1);
 	}
 	return (0);
 }

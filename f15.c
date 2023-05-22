@@ -11,6 +11,7 @@ int mobility(jobs *job)
 	int stdin_fileno = fileno(stdin);
 	int input_isatty = isatty(stdin_fileno);
 	int readfile = job->readfd <= 2;
+
 	return (input_isatty && readfile);
 }
 
@@ -22,10 +23,10 @@ int mobility(jobs *job)
 
 int _isalpha(int c)
 {
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-                return (1);
-        else
-                return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
 
 /**
@@ -70,49 +71,46 @@ int _atoi(char *s)
 
 char **str_tok(char *str, char *d)
 {
-        int i, j, k, numwords = 0;
-        char **s;
+	int i, j, k, numwords = 0;
+	char **s;
 
-        if (!str || str[0] == '\0')
-                return NULL;
+	if (!str || str[0] == '\0')
+		return (NULL);
 
-        if (!d)
-                d = " ";
+	if (!d)
+		d = " ";
 
-        for (i = 0; str[i] != '\0'; i++)
-                if (!check_del(str[i], d) && (check_del(str[i + 1], d) || !str[i + 1]))
-                        numwords++;
+	for (i = 0; str[i] != '\0'; i++)
+		if (!check_del(str[i], d) && (check_del(str[i + 1], d) || !str[i + 1]))
+			numwords++;
 
-        if (numwords == 0)
-                return NULL;
+	if (numwords == 0)
+		return (NULL);
 
-        s = malloc((numwords + 1) * sizeof(char *));
-        if (!s)
-                return NULL;
-
-        for (i = 0, j = 0; j < numwords; j++) {
-                while (check_del(str[i], d))
-                        i++;
-
-                k = 0;
-                while (!check_del(str[i + k], d) && str[i + k] != '\0')
-                        k++;
-
-                s[j] = malloc((k + 1) * sizeof(char));
-                if (!s[j]) {
-                        for (k = 0; k < j; k++)
-                                free(s[k]);
-                        free(s);
-                        return NULL;
-                }
-
-                strncpy(s[j], &str[i], k);
-                s[j][k] = '\0';
-                i += k;
-        }
-
-        s[j] = NULL;
-        return s;
+	s = malloc((numwords + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	for (i = 0, j = 0; j < numwords; j++)
+	{
+		while (check_del(str[i], d))
+			i++;
+		k = 0;
+		while (!check_del(str[i + k], d) && str[i + k] != '\0')
+			k++;
+		s[j] = malloc((k + 1) * sizeof(char));
+		if (!s[j])
+		{
+			for (k = 0; k < j; k++)
+				free(s[k]);
+			free(s);
+			return (NULL);
+		}
+		strncpy(s[j], &str[i], k);
+		s[j][k] = '\0';
+		i += k;
+	}
+	s[j] = NULL;
+	return (s);
 }
 
 /**
@@ -124,45 +122,39 @@ char **str_tok(char *str, char *d)
 
 char **split_string(char *str, char d)
 {
-        int i, j, k, numwords = 0;
-        char **s;
+	int i, j, k, numwords = 0;
+	char **s;
 
-        if (!str || str[0] == '\0')
-                return (NULL);
-
-        for (i = 0; str[i] != '\0'; i++)
-                if ((str[i] != d && str[i + 1] == d) ||
-                    (str[i] != d && !str[i + 1]) || str[i + 1] == d)
-                        numwords++;
-
-        if (numwords == 0)
-                return (NULL);
-
-        s = malloc((numwords + 1) * sizeof(char *));
-        if (!s)
-                return (NULL);
-
-        for (i = 0, j = 0; j < numwords; j++) {
-                while (str[i] == d)
-                        i++;
-
-                k = 0;
-                while (str[i + k] != d && str[i + k] != '\0')
-                        k++;
-
-                s[j] = malloc((k + 1) * sizeof(char));
-                if (!s[j]) {
-                        for (k = 0; k < j; k++)
-                                free(s[k]);
-                        free(s);
-                        return (NULL);
-                }
-
-                strncpy(s[j], &str[i], k);
-                s[j][k] = '\0';
-                i += k;
-        }
-
-        s[j] = NULL;
-        return (s);
+	if (!str || str[0] == '\0')
+		return (NULL);
+	for (i = 0; str[i] != '\0'; i++)
+		if ((str[i] != d && str[i + 1] == d) ||
+		    (str[i] != d && !str[i + 1]) || str[i + 1] == d)
+			numwords++;
+	if (numwords == 0)
+		return (NULL);
+	s = malloc((numwords + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	for (i = 0, j = 0; j < numwords; j++)
+	{
+		while (str[i] == d)
+			i++;
+		k = 0;
+		while (str[i + k] != d && str[i + k] != '\0')
+			k++;
+		s[j] = malloc((k + 1) * sizeof(char));
+		if (!s[j])
+		{
+			for (k = 0; k < j; k++)
+				free(s[k]);
+			free(s);
+			return (NULL);
+		}
+		strncpy(s[j], &str[i], k);
+		s[j][k] = '\0';
+		i += k;
+	}
+	s[j] = NULL;
+	return (s);
 }

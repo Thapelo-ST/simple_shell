@@ -80,6 +80,7 @@ char *changeInt(long int num, int base, int flags)
 void no_hashtags(char *buf)
 {
 	char *hashtag = _strchr(buf, '#');
+
 	if (hashtag != NULL && (hashtag == buf || *(hashtag - 1) == ' '))
 		*hashtag = '\0';
 }

@@ -10,16 +10,16 @@
 
 list *nbw(list *node, char *prefix, char c)
 {
-        char *p = NULL;
+	char *p = NULL;
 
-        while (node)
-        {
-                p = _bw(node->str, prefix);
-                if (p && ((c == -1) || (*p == c)))
-                        return (node);
-                node = node->next;
-        }
-        return (NULL);
+	while (node)
+	{
+		p = _bw(node->str, prefix);
+		if (p && ((c == -1) || (*p == c)))
+			return (node);
+		node = node->next;
+	}
+	return (NULL);
 }
 
 /**
@@ -31,16 +31,16 @@ list *nbw(list *node, char *prefix, char c)
 
 ssize_t gni(list *head, list *node)
 {
-        size_t i = 0;
+	size_t i = 0;
 
-        while (head)
-        {
-                if (head == node)
-                        return (i);
-                head = head->next;
-                i++;
-        }
-        return (-1);
+	while (head)
+	{
+		if (head == node)
+			return (i);
+		head = head->next;
+		i++;
+	}
+	return (-1);
 }
 
 /**
@@ -51,19 +51,19 @@ ssize_t gni(list *head, list *node)
 
 size_t p_list(const list *h)
 {
-        size_t i = 0;
+	size_t i = 0;
 
-        while (h)
-        {
-                _puts(changeInt(h->num, 10, 0));
-                _putchar(':');
-                _putchar(' ');
-                _puts(h->str ? h->str : "(nil)");
-                _puts("\n");
-                h = h->next;
-                i++;
-        }
-        return (i);
+	while (h)
+	{
+		_puts(changeInt(h->num, 10, 0));
+		_putchar(':');
+		_putchar(' ');
+		_puts(h->str ? h->str : "(nil)");
+		_puts("\n");
+		h = h->next;
+		i++;
+	}
+	return (i);
 }
 
 /**
@@ -74,10 +74,11 @@ size_t p_list(const list *h)
 
 size_t _list(const list *h)
 {
-        size_t i = 0;
-        for ( ; h ; h=h->next)
-                i++;
-        return (i);
+	size_t i = 0;
+
+	for (; h ; h = h->next)
+		i++;
+	return (i);
 }
 
 /**
@@ -89,30 +90,30 @@ size_t _list(const list *h)
 char **list_str(list *head)
 {
 
-        list *node = head;
-        size_t i = _list(head), j;
-        char **strs;
-        char *str;
+	list *node = head;
+	size_t i = _list(head), j;
+	char **strs;
+	char *str;
 
-        if (!head || !i)
-                return (NULL);
-        strs = malloc(sizeof(char *) * (i + 1));
-        if (!strs)
-                return (NULL);
-        for (i = 0; node; node = node->next, i++)
-        {
-                str = malloc(_strlen(node->str) + 1);
-                if (!str)
-                {
-                        for (j = 0; j < i; j++)
-                                free(strs[j]);
-                        free(strs);
-                        return (NULL);
-                }
+	if (!head || !i)
+		return (NULL);
+	strs = malloc(sizeof(char *) * (i + 1));
+	if (!strs)
+		return (NULL);
+	for (i = 0; node; node = node->next, i++)
+	{
+		str = malloc(_strlen(node->str) + 1);
+		if (!str)
+		{
+			for (j = 0; j < i; j++)
+				free(strs[j]);
+			free(strs);
+			return (NULL);
+		}
 
-                str = _strcpy(str, node->str);
-                strs[i] = str;
-        }
-        strs[i] = NULL;
-        return (strs);
+		str = _strcpy(str, node->str);
+		strs[i] = str;
+	}
+	strs[i] = NULL;
+	return (strs);
 }
